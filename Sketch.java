@@ -2,8 +2,6 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 	
-  int c1 = color(255);
-  int c2 = color(0);
   /**
    * Called once at the beginning of execution, put your size all in this method
    */
@@ -29,24 +27,31 @@ public class Sketch extends PApplet {
 	  
     //10x10 box
     stroke(0);
-    for (int boxX = width/10; boxX<=(width/2); boxX +=20) 
-      {line(boxX, 0, boxX, height/2);
+    for (int boxX = 0; boxX<=(width/2); boxX +=20)
+      {line(boxX, width/2, boxX, 0);
     }
     stroke(0);
-    for (int boxY = height/10; boxY<=(height/2); boxY +=20) 
+    for (int boxY = 0; boxY<=(height/2); boxY +=20) 
       {line(width/2, boxY, 0, boxY);
     }
     //gradiant
-    stroke(0);
-    for (int gradiant = 20; gradiant <= (width/2); gradiant+=20) {
+    for (int gradiant = 0; gradiant <= (width/2); gradiant+=10) {
       ;
     
       for (int i = 0; i<width/2; i++){
-      stroke(c1, i, c2);
+      stroke(i, i, i);
       line(i,0+height/2,i,height);
       }
+
+    //circle
+    stroke(0);
+    for (int circleY = 40; circleY <= (height/2)-20; circleY += 50) {
+      for (int circleX = (0+ (width/2)); circleX <= width-50; circleX += 50) {
+        ellipse(circleX+25, circleY, 40, 40);
     }
   }
+}
   
   // define other methods down here.
+}
 }
