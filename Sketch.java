@@ -7,7 +7,7 @@ public class Sketch extends PApplet {
    */
   public void settings() {
 	// put your size call here
-    size(500, 500);
+    size(600, 600);
   }
 
   /** 
@@ -27,11 +27,11 @@ public class Sketch extends PApplet {
 	  
     //10x10 box
     stroke(0);
-    for (int boxX = 0; boxX<=(width/2); boxX +=20)
+    for (int boxX = 0; boxX<=(width/2); boxX += (width/2/10))
       {line(boxX, width/2, boxX, 0);
     }
     stroke(0);
-    for (int boxY = 0; boxY<=(height/2); boxY +=20) 
+    for (int boxY = 0; boxY<=(height/2); boxY +=(width/2/10)) 
       {line(width/2, boxY, 0, boxY);
     }
     //gradiant
@@ -45,8 +45,9 @@ public class Sketch extends PApplet {
 
     //circle
     stroke(0);
-    for (int circleY = 40; circleY <= (height/2)-20; circleY += 50) {
-      for (int circleX = (0+ (width/2)); circleX <= width-50; circleX += 50) {
+    for (int circleY = 20; circleY <= (height/2)-20; circleY += width/2/5) {
+      for (int circleX = (0+ (width/2)); circleX <= width; circleX += width/2/5) {
+        fill(123,63,6);
         ellipse(circleX+25, circleY, 40, 40);
     }
   }
