@@ -7,7 +7,7 @@ public class Sketch extends PApplet {
    */
   public void settings() {
 	// put your size call here
-    size(600, 600);
+    size(400, 400);
   }
 
   /** 
@@ -35,9 +35,7 @@ public class Sketch extends PApplet {
       {line(width/2, boxY, 0, boxY);
     }
     //gradiant
-    for (int gradiant = 0; gradiant <= (width/2); gradiant+=10) {
-      ;
-    
+    for (int gradiant = 0; gradiant <= (width/2); gradiant+=10) 
       for (int i = 0; i<width/2; i++){
       stroke(i, i, i);
       line(i,0+height/2,i,height);
@@ -49,10 +47,27 @@ public class Sketch extends PApplet {
       for (int circleX = (0+ (width/2)); circleX <= width; circleX += width/2/5) {
         fill(123,63,6);
         ellipse(circleX+25, circleY, 40, 40);
+   
+     }
     }
+
+   //flower
+    fill(255,0,0);
+    int petalX = (width/4)*3;
+    int petalY = (height/4)*3;
+  
+    translate(petalX,petalY);
+    for (int petal = 0; petal < 8; petal++){
+      ellipse(0, width/10, width/10, height/8);
+      rotate(radians(45));
+    }
+    
+    fill(0,255,0);
+      ellipse(0, 0, (width/7), (width/7));
+ 
+        
   }
 }
   
   // define other methods down here.
-}
-}
+  
