@@ -58,7 +58,7 @@ public class Sketch extends PApplet {
   
     translate(petalX,petalY);
     for (int petal = 0; petal < 8; petal++){
-      ellipse(0, width/10, width/10, height/8);
+      ellipse(0, width/12, width/12, height/8);
       rotate(radians(45));
     }
     
